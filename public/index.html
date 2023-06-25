@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    
+<div id="message" class="align-vertical">
+
+    <textarea placeholder="no messages" id="chat-box" cols="30" rows="10" disabled></textarea>
+    <input type="text" id="type-box">
+    <button id="send">Send</button>
+
+</div>
+
+    <!-- <div id="videos" class="">
+        <span>
+            <video src="" id="local-video"></video>
+        </span>
+        <span>
+            <video src="" id="remote-video"></video>
+        </span>
+    </div> -->
+
+    <div id="options" class="align-horizontal">
+        <button id="create-call">Create chat</button>
+        <button id="answer-call">Answer chat</button>
+    </div>
+    
+    <div id="offer" class="align-horizontal">
+        <div class="align-vertical">
+            <textarea placeholder="Click to generate offer sdp" id="offer-sdp" cols="30" rows="10" disabled></textarea>
+            <button id="generate-offer-sdp">Generate offer</button>
+        </div>
+        <div class="align-vertical">
+            <textarea placeholder="Answer sdp here" id="remote-answer-sdp" cols="30" rows="10"></textarea>
+            <button id="set-answer-sdp">Set </button>
+        </div>
+        
+    </div>
+    <div id="answer" class="align-horizontal">
+        <div class="align-vertical">
+            
+            <textarea placeholder="Offer sdp here" id="remote-offer-sdp" cols="30" rows="10"></textarea>
+            <button id="set-offer-sdp">Set </button>
+        </div>
+        <div class="align-vertical">
+            
+            <textarea placeholder="CLick button to generate answer sdp" id="answer-sdp" cols="30" rows="10" disabled></textarea>
+            <button id="generate-answer-sdp">Generate answer</button>
+        </div>
+    </div>
+    
+    <div  class="align-vertical">
+        <textarea name="" id="servers" cols="30" rows="10"></textarea>
+        <button id="update-servers">Update servers</button>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>

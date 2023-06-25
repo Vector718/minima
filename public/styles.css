@@ -1,0 +1,45 @@
+div{
+    margin: 20px;
+}
+textarea{
+    margin: 20px;
+}
+button{
+    margin-right : 2rem ;
+}
+#videos video{
+    background-color: black;
+    height: 300px;
+    width: 500px;
+}
+
+#videos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.align-vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+#servers{
+    height: 100px;
+    width: 500px;
+}
+
+.align-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.margin{
+    margin: 20px;
+}
