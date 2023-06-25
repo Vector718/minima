@@ -14,6 +14,7 @@ const servers= document.getElementById('servers')
 const send= document.getElementById('send');
 const chatBox= document.getElementById('chat-box');
 const typeBox= document.getElementById('type-box');
+const updateServerButton= document.getElementById('update-servers');
 
 //------------------------------------------------------------------------------------------//
 
@@ -50,6 +51,7 @@ offerGenerateButton.addEventListener('click', async ()=>{
     };
     dc.onopen= ()=>{
         activateChatArea();
+        deactivateOthers();
     };
 })
 
@@ -75,6 +77,7 @@ setOfferButton.addEventListener('click',()=>{
         }
         peerConnection.dc.onopen=()=>{
             activateChatArea();
+            deactivateOthers();
         };
     }
 
@@ -110,6 +113,11 @@ function activateChatArea(){
     document.getElementById('message').style.display= 'flex';
 }
 
+function deactivateOthers(){
+    document.getElementById('options').style.display= 'none';
+    document.getElementById('server-options').style.display= 'none';
+}
+
 
 send.addEventListener('click',()=>{
     if (offerBlock.style.display=='none')
@@ -121,4 +129,9 @@ send.addEventListener('click',()=>{
         dc.send(typeBox.value);
     }
     typeBox.value= null;
+})
+
+
+updateServerButton.addEventListener('click',()=>{
+    config= JSON.parse(document.getElementById('servers').value);
 })

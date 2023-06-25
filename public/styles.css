@@ -7,6 +7,9 @@ textarea{
 button{
     margin-right : 2rem ;
 }
+input{
+    margin: 20px;
+}
 #videos video{
     background-color: black;
     height: 300px;
