@@ -133,5 +133,8 @@ send.addEventListener('click',()=>{
 
 
 updateServerButton.addEventListener('click',()=>{
-    config= JSON.parse(document.getElementById('servers').value);
+    // config= JSON.parse(document.getElementById('servers').value);
+    config= document.getElementById('servers').value;
+    peerConnection =new RTCPeerConnection(config);
+    dc= peerConnection.createDataChannel('channel');
 })
